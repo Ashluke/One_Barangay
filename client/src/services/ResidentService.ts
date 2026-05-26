@@ -11,11 +11,13 @@ const normalize = (r: any): Resident => ({
     || r.registeredVoter === "true"
 });
 
+// get residents api
 export const getResidents = async (): Promise<Resident[]> => {
   const res = await axios.get(BASE_URL);
   return res.data.map(normalize);
 };
 
+// create resident api
 export const createResident = async (data: ResidentRequest) => {
   return axios.post(BASE_URL, {
     ...data,
@@ -24,7 +26,8 @@ export const createResident = async (data: ResidentRequest) => {
   });
 };
 
-// ResidentService.ts - in updateResident
+
+// update resident api
 export const updateResident = (id: number, data: ResidentRequest) => {
   const body = {
     ...data,
@@ -34,6 +37,7 @@ export const updateResident = (id: number, data: ResidentRequest) => {
   return axios.put(`${BASE_URL}/${id}`, body);
 };
 
+// delete resident api
 export const deleteResident = (id: number) => {
   return axios.delete(`${BASE_URL}/${id}`);
 };

@@ -17,6 +17,8 @@ public class Certificate {
 
     public Certificate() {}
 
+
+    // constructor
     public Certificate(String fullName, int age, String civilStatus, double income) {
         this.fullName = fullName;
         this.age = age;
@@ -24,6 +26,8 @@ public class Certificate {
         this.income = income;
     }
 
+
+    // setters
     public void setFullName(String fullName) {
         this.fullName = fullName;
     }
@@ -40,6 +44,8 @@ public class Certificate {
         this.income = income;
     }
 
+
+    // getters
     public Long getId() {
         return id;
     }

@@ -16,9 +16,7 @@ public class ResidentService {
         this.repository = repository;
     }
 
-    // =====================
-    // CREATE
-    // =====================
+    // create resident
     public Resident addResident(ResidentRequest req) {
 
         Resident resident = new Resident(
@@ -32,24 +30,18 @@ public class ResidentService {
         return repository.save(resident);
     }
 
-    // =====================
-    // READ ALL
-    // =====================
+    // get resident
     public List<Resident> getAllResidents() {
         return repository.findAll();
     }
 
-    // =====================
-    // READ BY ID
-    // =====================
+    // get resident by id
     public Resident getResidentById(Long id) {
         return repository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Resident not found"));
     }
 
-    // =====================
-    // UPDATE
-    // =====================
+    // update resident
     public Resident updateResident(Long id, ResidentRequest update) {
 
         Resident existing = repository.findById(id)
@@ -78,9 +70,7 @@ public class ResidentService {
         return repository.save(existing);
     }
 
-    // =====================
-    // DELETE
-    // =====================
+    // delete resident by id
     public void deleteResident(Long id) {
         repository.deleteById(id);
     }

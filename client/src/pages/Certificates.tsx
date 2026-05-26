@@ -10,7 +10,7 @@ import type {
 } from "../types/CertificateType";
 
 function Certificates() {
-  // UI STATE (STRING ONLY)
+  // ui state
   const [form, setForm] = useState<CertificateForm>({
     fullName: "",
     age: "",
@@ -20,7 +20,7 @@ function Certificates() {
 
   const [loading, setLoading] = useState(false);
 
-  // INPUT HANDLER
+  // input handler
   const handleChange = (
     field: keyof CertificateForm,
     value: string
@@ -31,13 +31,13 @@ function Certificates() {
     }));
   };
 
-  // VALIDATION
+  // validation
   const isValidInteger = (value: string) => /^\d+$/.test(value);
 
-  // GENERATE CERTIFICATE
+  // generate cert
   const generate = async () => {
 
-  // VALIDATION FIRST, BEFORE LOADING
+  // validate first before loading
   if (!form.fullName || !form.age || !form.civilStatus || !form.income) {
     alert("All fields are required");
     return;
@@ -48,7 +48,7 @@ function Certificates() {
     return;
   }
 
-  // ONLY SET LOADING AFTER VALIDATION PASSES
+  // load after validation pass
   setLoading(true);
 
   try {

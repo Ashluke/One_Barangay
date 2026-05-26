@@ -1,3 +1,4 @@
+// client handling and validation
 export interface Resident {
     id: number;
     fullName: string;
@@ -7,6 +8,7 @@ export interface Resident {
     isRegisteredVoter: boolean;
 }
 
+// send to server
 export type ResidentRequest = {
   fullName: string;
   age: string;

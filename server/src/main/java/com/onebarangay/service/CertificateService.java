@@ -25,10 +25,7 @@ public class CertificateService {
     public byte[] createIndigency(CertificateRequest req) {
 
         try {
-
-            // =========================
-            // 1. SAVE TO DATABASE
-            // =========================
+            // save to database
             Certificate cert = new Certificate(
                     req.getFullName(),
                     req.getAge(),
@@ -38,22 +35,16 @@ public class CertificateService {
 
             repository.save(cert);
 
-            // =========================
-            // 2. LOAD TEMPLATE
-            // =========================
+            // load template
             ClassPathResource resource =
                     new ClassPathResource("templates/brgy_indigency.docx");
 
-            // =========================
-            // 3. DATE VALUES
-            // =========================
+            // date values
             LocalDate today = LocalDate.now();
             DateTimeFormatter formatter =
                     DateTimeFormatter.ofPattern("MMMM");
 
-            // =========================
-            // 4. PLACEHOLDER DATA
-            // =========================
+            // placeholder data
             Map<String, Object> data = new HashMap<>();
 
             data.put("FULL_NAME", req.getFullName());
@@ -65,9 +56,7 @@ public class CertificateService {
             data.put("MONTH", today.format(formatter));
             data.put("YEAR", today.getYear());
 
-            // =========================
-            // 5. GENERATE DOCX
-            // =========================
+            // generate docx
             XWPFTemplate template =
                     XWPFTemplate.compile(resource.getInputStream())
                             .render(data);

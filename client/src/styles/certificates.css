@@ -6,7 +6,6 @@
   font-family: Arial, sans-serif;
 }
 
-/* FORM CONTAINER */
 .formBox {
   width: 320px;
   display: flex;
@@ -18,7 +17,6 @@
   background: #ffffff;
 }
 
-/* INPUT FIELDS */
 .formBox input,
 .formBox select {
   padding: 10px;
@@ -35,7 +33,6 @@
   box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.1);
 }
 
-/* BUTTON */
 .formBox button {
   margin-top: 10px;
   padding: 10px;
@@ -52,7 +49,6 @@
   background: #1d4ed8;
 }
 
-/* OPTIONAL RIGHT SIDE PREVIEW (if you add later) */
 .previewBox {
   width: 500px;
   min-height: 600px;
@@ -62,7 +58,6 @@
   padding: 20px;
 }
 
-/* TITLE STYLE (optional reuse) */
 .formBox h2 {
   margin-bottom: 10px;
   font-size: 18px;

@@ -1,3 +1,4 @@
+// download cert util
 export const downloadFile = (blobData: Blob, fileName: string) => {
     const url = window.URL.createObjectURL(blobData);
 

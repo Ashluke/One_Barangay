@@ -27,14 +27,11 @@ function Dashboard() {
     load();
   }, []);
 
-  // =========================
-  // SAFE AGE PARSER
-  // =========================
+  // save age parser
   const getAge = (r: Resident) => Number(r.age);
 
-  // =========================
-  // AGE CHART DATA
-  // =========================
+  
+  // age chart data
   const ageData = [
     {
       ageGroup: "Under 16",
@@ -54,9 +51,7 @@ function Dashboard() {
     }
   ];
 
-  // =========================
-  // STATUS CALCULATIONS
-  // =========================
+  // status calculations
   const total = residents.length;
   const voters = residents.filter(r => r.isRegisteredVoter).length;
   const nonVoters = total - voters;
@@ -70,9 +65,7 @@ function Dashboard() {
 
         <h2 className="mainTitle">Dashboard</h2>
 
-        {/* =========================
-            AGE CHART
-        ========================= */}
+        {/* age chart */}
         <h3 className="title">Age Chart</h3>
 
         <div className="chartContainer">
@@ -86,14 +79,12 @@ function Dashboard() {
           </ResponsiveContainer>
         </div>
 
-        {/* =========================
-            STATUS BARS
-        ========================= */}
+        {/* status bars */}
         <h3 className="title">Status</h3>
 
         <div className="statusBars">
 
-          {/* TOTAL */}
+          {/* total */}
           <div className="statusRow">
             <span className="label">Total Residents</span>
 
@@ -104,7 +95,7 @@ function Dashboard() {
             <span className="value">{total}</span>
           </div>
 
-          {/* VOTERS */}
+          {/* voters */}
           <div className="statusRow">
             <span className="label">Eligible to Vote</span>
 
@@ -118,7 +109,7 @@ function Dashboard() {
             <span className="value">{voters}</span>
           </div>
 
-          {/* NON VOTERS */}
+          {/* non voters */}
           <div className="statusRow">
             <span className="label">Ineligible to Vote</span>
 

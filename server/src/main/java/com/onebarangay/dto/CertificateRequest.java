@@ -8,6 +8,8 @@ public class CertificateRequest {
 
     public CertificateRequest() {}
 
+
+    // contstructor
     public CertificateRequest(String fullName, int age, String civilStatus, double income) {
         this.fullName = fullName;
         this.age = age;
@@ -15,6 +17,7 @@ public class CertificateRequest {
         this.income = income;
     }
 
+    // setters
     public void setFullName(String fullName) {
         this.fullName = fullName;
     }

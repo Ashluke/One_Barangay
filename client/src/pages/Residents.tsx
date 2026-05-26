@@ -33,9 +33,7 @@ function Residents() {
 
   const [form, setForm] = useState<ResidentRequest>(emptyForm);
 
-  // =========================
-  // LOAD
-  // =========================
+  // load residents
   const loadResidents = async () => {
     setLoading(true);
     const data = await getResidents();
@@ -47,9 +45,7 @@ function Residents() {
     loadResidents();
   }, []);
 
-  // =========================
-  // OPEN ADD
-  // =========================
+  // open add resident
   const openAdd = () => {
     setForm(emptyForm);
     setIsEdit(false);
@@ -57,9 +53,7 @@ function Residents() {
     open();
   };
 
-  // =========================
-  // OPEN EDIT
-  // =========================
+  // open edit resident
   const openEdit = (r: Resident) => {
     setForm({
       fullName: r.fullName,
@@ -74,9 +68,7 @@ function Residents() {
     open();
   };
 
-  // =========================
-  // HANDLERS (FIXED PROPERLY)
-  // =========================
+  // handlers
 
   const handleTextChange = (
     field: keyof Omit<ResidentRequest, "isRegisteredVoter">,
@@ -95,9 +87,7 @@ function Residents() {
     }));
   };
 
-  // =========================
-  // DELETE
-  // =========================
+  // delete resident
   const handleDelete = async (id: number) => {
     if (!confirm("Delete this resident?")) return;
 
@@ -111,14 +101,10 @@ function Residents() {
     }
   };
 
-  // =========================
-  // VALIDATION
-  // =========================
+  // validation
   const isValidInteger = (value: string) => /^\d+$/.test(value);
 
-  // =========================
-  // SAVE
-  // =========================
+  // save
   const handleSave = async () => {
 
     if (
@@ -160,9 +146,7 @@ function Residents() {
     }
   };
 
-  // =========================
-  // UI
-  // =========================
+  // ui
   return (
     <Layout>
       <div className="residents">
@@ -248,7 +232,6 @@ function Residents() {
             }
           />
 
-          {/* FIXED BOOLEAN SELECT */}
           <select
             value={form.isRegisteredVoter ? "true" : "false"}
             onChange={(e) =>

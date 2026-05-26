@@ -14,11 +14,34 @@ public class ResidentRequest {
 
     public ResidentRequest() {}
 
+
+    // constructor
     public ResidentRequest(String fullName, int age, String civilStatus, String address, boolean registeredVoter){
         this.fullName = fullName;
         this.age = age;
         this.civilStatus = civilStatus;
         this.address = address;
+        this.registeredVoter = registeredVoter;
+    }
+
+    // setters
+    public void setFullName(String fullName) {
+        this.fullName = fullName;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public void setCivilStatus(String civilStatus) {
+        this.civilStatus = civilStatus;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public void setRegisteredVoter(boolean registeredVoter) {
         this.registeredVoter = registeredVoter;
     }
 
@@ -44,10 +67,4 @@ public class ResidentRequest {
     public boolean registeredVoter() {
         return registeredVoter;
     }
-
-    public void setFullName(String fullName) { this.fullName = fullName; }
-    public void setAge(int age) { this.age = age; }
-    public void setCivilStatus(String civilStatus) { this.civilStatus = civilStatus; }
-    public void setAddress(String address) { this.address = address; }
-    public void setRegisteredVoter(boolean registeredVoter) { this.registeredVoter = registeredVoter; }
 }

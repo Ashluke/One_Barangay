@@ -18,30 +18,31 @@ public class ResidentController {
         this.service = service;
     }
 
-    // CREATE
+    // create
     @PostMapping
     public Resident addResident(@RequestBody ResidentRequest req) {
         return service.addResident(req);
     }
 
-    // READ ALL
+    // read all
     @GetMapping
     public List<Resident> getAll() {
         return service.getAllResidents();
     }
 
-    // READ BY ID
+    // read by id
     @GetMapping("/{id}")
     public Resident getById(@PathVariable Long id) {
         return service.getResidentById(id);
     }
 
-    // DELETE
+    // delete
     @DeleteMapping("/{id}")
     public void delete(@PathVariable Long id) {
         service.deleteResident(id);
     }
 
+    // update
     @PutMapping("/{id}")
     public Resident update(@PathVariable Long id, @RequestBody ResidentRequest req) {
         return service.updateResident(id, req);

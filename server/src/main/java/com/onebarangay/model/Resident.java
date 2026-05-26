@@ -22,6 +22,8 @@ public class Resident {
 
     public Resident() {}
 
+
+    // constructor
     public Resident(String fullName, int age, String civilStatus, String address, boolean registeredVoter) {
         this.fullName = fullName;
         this.age = age;
@@ -30,6 +32,8 @@ public class Resident {
         this.registeredVoter = registeredVoter;
     }
 
+
+    // setters
     public void setId(Long id) {
         this.id = id;
     }
@@ -55,10 +59,29 @@ public class Resident {
         this.registeredVoter = registeredVoter;
     }
 
-    public Long getId() { return id; }
-    public String getFullName() { return fullName; }
-    public int getAge() { return age; }
-    public String getCivilStatus() { return civilStatus; }
-    public String getAddress() { return address; }
-    public boolean isRegisteredVoter() { return registeredVoter; }
+    
+    // getters
+    public Long getId() {
+         return id;
+    }
+
+    public String getFullName() {
+        return fullName; 
+    }
+
+    public int getAge() {
+        return age; 
+    }
+
+    public String getCivilStatus() { 
+        return civilStatus; 
+    }
+
+    public String getAddress() { 
+        return address; 
+    }
+
+    public boolean isRegisteredVoter() { 
+        return registeredVoter; 
+    }
 }

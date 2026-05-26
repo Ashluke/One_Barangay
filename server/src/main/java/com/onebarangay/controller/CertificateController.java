@@ -18,6 +18,7 @@ public class CertificateController {
         this.service = service;
     }
 
+    // create cert
     @PostMapping("/indigency")
     public ResponseEntity<byte[]> generateIndigency(@RequestBody CertificateRequest req) {
 

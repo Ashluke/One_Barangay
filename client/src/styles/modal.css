@@ -1,4 +1,3 @@
-/* backdrop */
 .modalBackdrop {
   position: fixed;
   inset: 0;
@@ -9,7 +8,6 @@
   z-index: 1000;
 }
 
-/* modal box */
 .modal {
   width: 420px;
   background: #ffffff;
@@ -22,7 +20,6 @@
   animation: pop 0.15s ease-in-out;
 }
 
-/* header */
 .modalHeader {
   display: flex;
   justify-content: space-between;
@@ -36,7 +33,6 @@
   font-size: 18px;
 }
 
-/* close button */
 .modalHeader button {
   background: transparent;
   border: none;
@@ -44,7 +40,6 @@
   cursor: pointer;
 }
 
-/* inputs */
 .modal input,
 .modal select {
   padding: 13px;
@@ -60,7 +55,6 @@
   border-color: #4f46e5;
 }
 
-/* save button */
 .modal button {
   background: #4f46e5;
   color: white;
@@ -76,7 +70,6 @@
   background: #4338ca;
 }
 
-/* animation */
 @keyframes pop {
   from {
     transform: scale(0.95);

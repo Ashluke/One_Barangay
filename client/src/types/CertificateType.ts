@@ -1,3 +1,4 @@
+// client handling and validation
 export interface CertificateForm {
   fullName: string;
   age: string;
@@ -5,6 +6,7 @@ export interface CertificateForm {
   income: string;
 }
 
+// send to server
 export interface CertificateRequest {
   fullName: string;
   age: number;
