@@ -1,0 +1,54 @@
+.residentsPage {
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  padding: 10px;
+}
+
+.header .buttonContainer {
+    display: flex;
+    gap: 20px;
+}
+
+.header button {
+  padding: 8px 12px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  width: 150px;
+}
+
+.header button:hover {
+    background-color: darkblue;
+}
+
+.header button:active {
+    transform: translateY(2px) scale(0.98);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.residentsTable {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+}
+
+.residentsTable th,
+.residentsTable td {
+  border: 1px solid #e5e7eb;
+  padding: 10px;
+  text-align: left;
+}
+
+.residentsTable th {
+  background: #f3f4f6;
+}

@@ -1,0 +1,9 @@
+target/
+
+# logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+.vscode/

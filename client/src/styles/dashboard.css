@@ -1,0 +1,148 @@
+.dashboard {
+  padding: 20px;
+  background-color: lightcyan;
+  height: 100vh;
+}
+
+/* =========================
+   TITLES
+========================= */
+
+.mainTitle {
+  font-size: 22px;
+  margin-left: auto;
+  display: flex;
+  padding-left: 10px;
+}
+
+.title {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #111827;
+}
+
+/* =========================
+   CHART
+========================= */
+
+.chartContainer {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 15px;
+}
+
+/* =========================
+   SKELETON / CARDS (your original)
+========================= */
+
+.cardRow {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.skeletonCard {
+  flex: 1;
+  height: 80px;
+  background: #e5e7eb;
+  border-radius: 10px;
+  animation: pulse 1.5s infinite;
+}
+
+.skeletonBox {
+  background: #f3f4f6;
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+.statusContainer {
+  display: flex;
+  gap: 10px;
+}
+
+.statusCard {
+  flex: 1;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.line {
+  height: 12px;
+  background: #d1d5db;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  animation: pulse 1.5s infinite;
+}
+
+.line.short {
+  width: 60%;
+}
+
+/* =========================
+   STATUS BAR GRAPH (NEW)
+========================= */
+
+.statusBars {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.statusRow {
+  display: grid;
+  grid-template-columns: 160px 1fr 60px;
+  align-items: center;
+  gap: 10px;
+}
+
+.label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #111827;
+}
+
+.value {
+  text-align: right;
+  font-weight: bold;
+  color: #111827;
+}
+
+.barBg {
+  width: 100%;
+  height: 10px;
+  background: #e5e7eb;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.barFill {
+  height: 100%;
+  border-radius: 999px;
+  transition: width 0.4s ease;
+}
+
+.barFill.total {
+  background: #3b82f6;
+}
+
+.barFill.eligible {
+  background: #22c55e;
+}
+
+.barFill.ineligible {
+  background: #ef4444;
+}
+
+/* =========================
+   ANIMATION
+========================= */
+
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.4; }
+  100% { opacity: 1; }
+}

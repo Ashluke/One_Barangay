@@ -1,0 +1,70 @@
+.certPage {
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+  gap: 30px;
+  font-family: Arial, sans-serif;
+}
+
+/* FORM CONTAINER */
+.formBox {
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 20px;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  background: #ffffff;
+}
+
+/* INPUT FIELDS */
+.formBox input,
+.formBox select {
+  padding: 10px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-size: 14px;
+  outline: none;
+  transition: 0.2s;
+}
+
+.formBox input:focus,
+.formBox select:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.1);
+}
+
+/* BUTTON */
+.formBox button {
+  margin-top: 10px;
+  padding: 10px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.formBox button:hover {
+  background: #1d4ed8;
+}
+
+/* OPTIONAL RIGHT SIDE PREVIEW (if you add later) */
+.previewBox {
+  width: 500px;
+  min-height: 600px;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  background: #fff;
+  padding: 20px;
+}
+
+/* TITLE STYLE (optional reuse) */
+.formBox h2 {
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: #111827;
+}
